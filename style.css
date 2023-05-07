@@ -1,0 +1,428 @@
+
+.neon {
+    font-size: 60px;
+    color: #fff;
+    margin-top: -7px;
+    font-family: 'Rubik Glitch';
+   line-spacing : 6px;
+   text-align:center;
+   font-weight: 200;
+  }
+
+  .stat{
+    font-size: 20px;
+    font-family:'Bruno Ace SC', cursive ;
+    margin-top:10px;
+    color: white;
+  }
+
+canvas{
+  border-color: white;
+  border-width: 10px;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px white;
+
+}
+  .container{
+    font-size: 25px;
+    font-family: 'Bruno Ace SC', cursive;
+    line-spacing : 1px;
+    color:#000000;
+    position: fixed;
+   margin-top: 510px;
+  }
+  #start{
+    margin-left: 10px;
+    font-family: 'Rubik Glitch';
+background-color: transparent;
+color: white;
+font-size: 30px;
+border-color: #fff;
+border-width: 8px;
+  }
+  #input{
+    font-size: 30px;
+    color: #fff;
+    border-color: white;
+    border-width: 10px;
+    background-color: transparent;
+    font-family: 'Bruno Ace SC', cursive;
+  }
+  #info{
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Bruno Ace SC', cursive;
+   line-spacing : 1px;
+   text-align:center;
+  
+  }
+
+  #label{
+    font-size: 35px;
+    color: #fff;
+    font-family: 'Rubik Glitch';
+   line-spacing : 2px;
+ 
+  }
+body {
+ 
+ text-align: center;
+    background-color: #5749aa;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.StarsWrapper {
+  font-size: 400px;
+  position: relative;
+  height: 80vh;
+  z-index: -10;
+  overflow: hidden;
+  opacity: 0.5;
+}
+
+.StarsWrapper:after {
+  content: "";
+  background: #5749aa;
+  background: linear-gradient(0deg, #5749aa 0%, rgba(87, 73, 170, 0.8634804264) 23%, rgba(87, 73, 170, 0.6449930314) 55%, rgba(87, 73, 170, 0) 100%);
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+/* top part of the small stars*/
+.Stars {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  overflow: hidden;
+  animation: glitter 6.5s linear 0s infinite normal;
+  -webkit-animation: glitter 6.5s linear 0s infinite normal;
+  -moz-animation: glitter 6.5s linear 0s infinite normal;
+  -ms-animation: glitter 6.5s linear 0s infinite normal;
+  -o-animation: glitter 6.5s linear 0s infinite normal;
+}
+
+.Stars:before, .Stars:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #5749aa;
+  top: -50%;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.Stars:before {
+  left: 50%;
+}
+
+.Stars:after {
+  left: -50%;
+}
+
+/* bottom part of the small stars*/
+.StarBottom {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.StarBottom:before, .StarBottom:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #5749aa;
+  top: 50%;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.StarBottom:before {
+  left: 50%;
+}
+
+.StarBottom:after {
+  left: -50%;
+}
+
+/* top part of the small stars*/
+.BigStars {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  overflow: hidden;
+  animation: glitter 2.5s linear 2s infinite normal;
+  -webkit-animation: glitter 2.5s linear 2s infinite normal;
+  -moz-animation: glitter 2.5s linear 0s infinite normal;
+  -ms-animation: glitter 2.5s linear 0s infinite normal;
+  -o-animation: glitter 2.5s linear 0s infinite normal;
+}
+
+.BigStars:before, .BigStars:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #5749aa;
+  top: -50%;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.BigStars:before {
+  left: 50%;
+}
+
+.BigStars:after {
+  left: -50%;
+}
+
+/* bottom part of the small stars*/
+.BigStarsBottom {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.BigStarsBottom:before, .BigStarsBottom:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #5749aa;
+  top: 50%;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.BigStarsBottom:before {
+  left: 50%;
+}
+
+.BigStarsBottom:after {
+  left: -50%;
+}
+
+/* a background to hide shooting stars when fall */
+.MountainBK {
+  position: absolute;
+  z-index: -12;
+  bottom: 0px;
+  background: #5749aa;
+  background: linear-gradient(0deg, #5749aa 0%, #5749aa 88%, rgba(87, 73, 170, 0) 100%);
+  width: 100%;
+  height: 210px;
+  opacity: 1;
+}
+
+.MountainBottom {
+  position: absolute;
+  z-index: -5;
+  bottom: -140px;
+  transform: scale(1, 0.5);
+  opacity: 0.5;
+}
+
+.TopMout {
+  fill: url(#TopMout);
+  opacity: 0.5;
+}
+
+.MountainTop {
+  position: absolute;
+  bottom: -190px;
+  opacity: 1;
+  transform: scale(1, 0.5);
+}
+
+
+
+.Shadows {
+  position: absolute;
+  left: 10px;
+  bottom: -50px;
+  width: 100%;
+  height: 50px;
+  z-index: 5;
+  opacity: 1;
+}
+
+.Shadows:after, .Shadows:before {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 70px;
+  box-shadow: 0px 0px 840px 130px #000;
+  -webkit-box-shadow: 0px 0px 840px 130px #000;
+  -moz-box-shadow: 0px 0px 840px 130px #000;
+}
+
+/* right shadow */
+.Shadows:after {
+  right: 50px;
+  bottom: -30px;
+  opacity: 0.7;
+}
+
+/* left shadow  */
+.Shadows:before {
+  left: 60px;
+  bottom: -50px;
+  opacity: 0.3;
+}
+
+.ShootingStar {
+  transform: rotate(-45deg);
+  margin: 25px 0;
+  top: 100%;
+  right: 20%;
+  position: absolute;
+  height: 2px;
+  border: 0;
+  opacity: 0.5;
+  width: 150px;
+  z-index: -20;
+  background: #fff;
+  box-shadow: 0px 0px 70px 1px #fff;
+  -webkit-box-shadow: 0px 0px 70px 1px #fff;
+  -moz-box-shadow: 0px 0px 70px 1px #fff;
+  background: -webkit-gradient(linear, 0 0, 100% 10, from(#5749aa), to(#5749aa), color-stop(0%, #fff));
+  animation: ShootingStarsOne 2s linear 3s, ShootingStarsTwo 2s linear 6s, ShootingStarsOne 2s linear 10s, ShootingStarsTwo 2s linear 15s, ShootingStarsOne 2s linear 20s, ShootingStarsTwo 2s linear 25s, ShootingStarsOne 2s linear 32s, ShootingStarsTwo 2s linear 40s;
+  -webkit-animation: ShootingStarsOne 2s linear 3s, ShootingStarsTwo 2s linear 6s, ShootingStarsOne 2s linear 10s, ShootingStarsTwo 2s linear 15s, ShootingStarsOne 2s linear 20s, ShootingStarsTwo 2s linear 25s, ShootingStarsOne 2s linear 32s, ShootingStarsTwo 2s linear 40s;
+}
+
+.ShootingStar:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 7px;
+  top: -2px;
+  left: -3px;
+  border-radius: 55%;
+  background: #fff;
+  box-shadow: 0px 0px 40px 10px #fff;
+}
+
+@keyframes glowing {
+  from {
+    box-shadow: 0px 0px 100px 10px #fff;
+  }
+  to {
+    box-shadow: 0px 0px 140px 20px #fff;
+  }
+}
+@-webkit-keyframes glowing {
+  from {
+    -webkit-box-shadow: 0px 0px 540px 50px #fff;
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 240px 60px #fff;
+  }
+}
+@-webkit-keyframes glitter {
+  0% {
+    -webkit-transform: scale(0.8);
+    opacity: 1;
+  }
+  25% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+    opacity: 1;
+  }
+}
+@keyframes ShootingStarsOne {
+  from {
+    opacity: 1;
+    width: 150px;
+    left: 80%;
+    top: -500px;
+    -webkit-transform: rotate(-45deg) height;
+  }
+  to {
+    opacity: 0;
+    width: 350px;
+    left: -50%;
+    top: 550px;
+    -webkit-transform: rotate(-20deg);
+  }
+}
+@-webkit-keyframes ShootingStarsOne {
+  from {
+    opacity: 1;
+    width: 150px;
+    left: 80%;
+    top: -500px;
+    -webkit-transform: rotate(-45deg) height;
+  }
+  to {
+    opacity: 0;
+    width: 350px;
+    left: -50%;
+    top: 550px;
+    -webkit-transform: rotate(-20deg);
+  }
+}
+@-webkit-keyframes ShootingStarsTwo {
+  from {
+    opacity: 1;
+    width: 150px;
+    left: 120%;
+    top: -500px;
+    -webkit-transform: rotate(-45deg) height;
+  }
+  to {
+    opacity: 0;
+    width: 350px;
+    left: 45%;
+    top: 550px;
+    -webkit-transform: rotate(-40deg);
+  }
+}
+@keyframes ShootingStarsTwo {
+  from {
+    opacity: 1;
+    width: 150px;
+    left: 120%;
+    top: -500px;
+    transform: rotate(-45deg) height;
+  }
+  to {
+    opacity: 0;
+    width: 350px;
+    left: 45%;
+    top: 550px;
+    transform: rotate(-40deg);
+  }
+}
